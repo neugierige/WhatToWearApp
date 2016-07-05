@@ -16,6 +16,7 @@
 		B1D301801D29E11A006811F5 /* WhatToWearAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3017F1D29E11A006811F5 /* WhatToWearAppUITests.swift */; };
 		B1D3018E1D29E16E006811F5 /* Clothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3018D1D29E16E006811F5 /* Clothing.swift */; };
 		B1D301901D29E1B8006811F5 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3018F1D29E1B8006811F5 /* Outfit.swift */; };
+		B1F1B8631D2C76BD002B2E99 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1F1B8621D2C76BD002B2E99 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B1D301811D29E11A006811F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1D3018D1D29E16E006811F5 /* Clothing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothing.swift; sourceTree = "<group>"; };
 		B1D3018F1D29E1B8006811F5 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		B1F1B8621D2C76BD002B2E99 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				B1D301661D29E11A006811F5 /* Assets.xcassets */,
 				B1D301681D29E11A006811F5 /* LaunchScreen.storyboard */,
 				B1D3016B1D29E11A006811F5 /* Info.plist */,
+				B1F1B8621D2C76BD002B2E99 /* GoogleService-Info.plist */,
 			);
 			path = WhatToWearApp;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1D3016A1D29E11A006811F5 /* LaunchScreen.storyboard in Resources */,
+				B1F1B8631D2C76BD002B2E99 /* GoogleService-Info.plist in Resources */,
 				B1D301671D29E11A006811F5 /* Assets.xcassets in Resources */,
 				B1D301651D29E11A006811F5 /* Main.storyboard in Resources */,
 			);
