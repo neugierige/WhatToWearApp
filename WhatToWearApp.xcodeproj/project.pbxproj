@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141D581A8E1700D3D21C2B99 /* Pods_WhatToWearAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F010A67A5A0894E0D6E66 /* Pods_WhatToWearAppUITests.framework */; };
+		6CFF7EB78E5476C94E89B305 /* Pods_WhatToWearAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABFD1FD4CCB5BE94DA49D1C /* Pods_WhatToWearAppTests.framework */; };
 		B1D301601D29E11A006811F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3015F1D29E11A006811F5 /* AppDelegate.swift */; };
 		B1D301621D29E11A006811F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D301611D29E11A006811F5 /* ViewController.swift */; };
 		B1D301651D29E11A006811F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D301631D29E11A006811F5 /* Main.storyboard */; };
@@ -17,6 +19,7 @@
 		B1D3018E1D29E16E006811F5 /* Clothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3018D1D29E16E006811F5 /* Clothing.swift */; };
 		B1D301901D29E1B8006811F5 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3018F1D29E1B8006811F5 /* Outfit.swift */; };
 		B1F1B8631D2C76BD002B2E99 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1F1B8621D2C76BD002B2E99 /* GoogleService-Info.plist */; };
+		CE74C3FFB530A15CA001D976 /* Pods_WhatToWearApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B02B5343DCB58CBD0C6C90B /* Pods_WhatToWearApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0952EBEADC8DD7FCBE3144F6 /* Pods-WhatToWearApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToWearApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToWearApp/Pods-WhatToWearApp.debug.xcconfig"; sourceTree = "<group>"; };
+		24AF8FD0683A1D1F747F92C9 /* Pods-WhatToWearAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToWearAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToWearAppTests/Pods-WhatToWearAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		2ABFD1FD4CCB5BE94DA49D1C /* Pods_WhatToWearAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatToWearAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B02B5343DCB58CBD0C6C90B /* Pods_WhatToWearApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatToWearApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		539011CB3809D20E6FD36E60 /* Pods-WhatToWearApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToWearApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToWearApp/Pods-WhatToWearApp.release.xcconfig"; sourceTree = "<group>"; };
+		576F010A67A5A0894E0D6E66 /* Pods_WhatToWearAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatToWearAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E5375D022C31ED690B7FD8C /* Pods-WhatToWearAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToWearAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToWearAppUITests/Pods-WhatToWearAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		904175A0B951CAE68CBA904F /* Pods-WhatToWearAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToWearAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToWearAppTests/Pods-WhatToWearAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1D3015C1D29E11A006811F5 /* WhatToWearApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToWearApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D3015F1D29E11A006811F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1D301611D29E11A006811F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +64,7 @@
 		B1D3018D1D29E16E006811F5 /* Clothing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothing.swift; sourceTree = "<group>"; };
 		B1D3018F1D29E1B8006811F5 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
 		B1F1B8621D2C76BD002B2E99 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F63F58EB2962C99D8F6BAB20 /* Pods-WhatToWearAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToWearAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToWearAppUITests/Pods-WhatToWearAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE74C3FFB530A15CA001D976 /* Pods_WhatToWearApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CFF7EB78E5476C94E89B305 /* Pods_WhatToWearAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141D581A8E1700D3D21C2B99 /* Pods_WhatToWearAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03FAC0D107D4CAA32EDF2FAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0952EBEADC8DD7FCBE3144F6 /* Pods-WhatToWearApp.debug.xcconfig */,
+				539011CB3809D20E6FD36E60 /* Pods-WhatToWearApp.release.xcconfig */,
+				904175A0B951CAE68CBA904F /* Pods-WhatToWearAppTests.debug.xcconfig */,
+				24AF8FD0683A1D1F747F92C9 /* Pods-WhatToWearAppTests.release.xcconfig */,
+				F63F58EB2962C99D8F6BAB20 /* Pods-WhatToWearAppUITests.debug.xcconfig */,
+				7E5375D022C31ED690B7FD8C /* Pods-WhatToWearAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		261EEC13EDF6BE180CACF7D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B02B5343DCB58CBD0C6C90B /* Pods_WhatToWearApp.framework */,
+				2ABFD1FD4CCB5BE94DA49D1C /* Pods_WhatToWearAppTests.framework */,
+				576F010A67A5A0894E0D6E66 /* Pods_WhatToWearAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B1D301531D29E11A006811F5 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +125,8 @@
 				B1D301731D29E11A006811F5 /* WhatToWearAppTests */,
 				B1D3017E1D29E11A006811F5 /* WhatToWearAppUITests */,
 				B1D3015D1D29E11A006811F5 /* Products */,
+				03FAC0D107D4CAA32EDF2FAB /* Pods */,
+				261EEC13EDF6BE180CACF7D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1D301841D29E11A006811F5 /* Build configuration list for PBXNativeTarget "WhatToWearApp" */;
 			buildPhases = (
+				74ABE4C3646C6E3E92B81863 /* [CP] Check Pods Manifest.lock */,
 				B1D301581D29E11A006811F5 /* Sources */,
 				B1D301591D29E11A006811F5 /* Frameworks */,
 				B1D3015A1D29E11A006811F5 /* Resources */,
+				8559C08CC4A0A4E6A72523A0 /* [CP] Embed Pods Frameworks */,
+				B6EE0726776303180A2B847F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1D301871D29E11A006811F5 /* Build configuration list for PBXNativeTarget "WhatToWearAppTests" */;
 			buildPhases = (
+				BE7F4526D5EDB6DD3566B3C8 /* [CP] Check Pods Manifest.lock */,
 				B1D3016C1D29E11A006811F5 /* Sources */,
 				B1D3016D1D29E11A006811F5 /* Frameworks */,
 				B1D3016E1D29E11A006811F5 /* Resources */,
+				6B3802D80BA270D490520D42 /* [CP] Embed Pods Frameworks */,
+				C523902F4F801D321E89C47D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1D3018A1D29E11A006811F5 /* Build configuration list for PBXNativeTarget "WhatToWearAppUITests" */;
 			buildPhases = (
+				2DFDBD3E2820A2EC13A00521 /* [CP] Check Pods Manifest.lock */,
 				B1D301771D29E11A006811F5 /* Sources */,
 				B1D301781D29E11A006811F5 /* Frameworks */,
 				B1D301791D29E11A006811F5 /* Resources */,
+				5129FC393D81FC1DAF0AFC6A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,6 +317,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DFDBD3E2820A2EC13A00521 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5129FC393D81FC1DAF0AFC6A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatToWearAppUITests/Pods-WhatToWearAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B3802D80BA270D490520D42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatToWearAppTests/Pods-WhatToWearAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74ABE4C3646C6E3E92B81863 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8559C08CC4A0A4E6A72523A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatToWearApp/Pods-WhatToWearApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6EE0726776303180A2B847F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatToWearApp/Pods-WhatToWearApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE7F4526D5EDB6DD3566B3C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C523902F4F801D321E89C47D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatToWearAppTests/Pods-WhatToWearAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1D301581D29E11A006811F5 /* Sources */ = {
@@ -424,6 +595,7 @@
 		};
 		B1D301851D29E11A006811F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0952EBEADC8DD7FCBE3144F6 /* Pods-WhatToWearApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WhatToWearApp/Info.plist;
@@ -437,6 +609,7 @@
 		};
 		B1D301861D29E11A006811F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539011CB3809D20E6FD36E60 /* Pods-WhatToWearApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WhatToWearApp/Info.plist;
@@ -450,6 +623,7 @@
 		};
 		B1D301881D29E11A006811F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 904175A0B951CAE68CBA904F /* Pods-WhatToWearAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WhatToWearAppTests/Info.plist;
@@ -463,6 +637,7 @@
 		};
 		B1D301891D29E11A006811F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24AF8FD0683A1D1F747F92C9 /* Pods-WhatToWearAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WhatToWearAppTests/Info.plist;
@@ -476,6 +651,7 @@
 		};
 		B1D3018B1D29E11A006811F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F63F58EB2962C99D8F6BAB20 /* Pods-WhatToWearAppUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = WhatToWearAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -488,6 +664,7 @@
 		};
 		B1D3018C1D29E11A006811F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E5375D022C31ED690B7FD8C /* Pods-WhatToWearAppUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = WhatToWearAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
