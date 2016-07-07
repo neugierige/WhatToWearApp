@@ -19,7 +19,6 @@
 		B1D3018E1D29E16E006811F5 /* Clothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3018D1D29E16E006811F5 /* Clothing.swift */; };
 		B1D301901D29E1B8006811F5 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3018F1D29E1B8006811F5 /* Outfit.swift */; };
 		B1F1B8631D2C76BD002B2E99 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1F1B8621D2C76BD002B2E99 /* GoogleService-Info.plist */; };
-		CE74C3FFB530A15CA001D976 /* Pods_WhatToWearApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B02B5343DCB58CBD0C6C90B /* Pods_WhatToWearApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE74C3FFB530A15CA001D976 /* Pods_WhatToWearApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

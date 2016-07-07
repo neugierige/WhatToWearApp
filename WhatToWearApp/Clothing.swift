@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//import FirebaseStorage
 
 class Clothing {
     
@@ -27,7 +28,33 @@ class Clothing {
     ]
     
     
+//    let storage = FIRStorage.storage()
+//
+//    func getItems() {
+//        
+//        let storageRef = storage.reference(forURL: "gs://shining-heat-5365.firebaseio.com")
+//        
+//        var x = 0
+//        while x <= storageRef.accessibilityElementCount() {
+//            url = "https://<your-firebase-app>.firebaseio.com/" + "\(x)"
+//            
+//            storageRef.observeEventType(.value, withBlock: { snapshot in
+//                print(snapshot.value)
+//                }, withCancelBlock: { error in
+//                    print(error.description)
+//            })
+//            
+//            
+//            
+//            x += 1
+//        }
+//        
+//        
+//    }
+    
+    
     func getTops() -> Array<[String:String]> {
+        
         var topsArray: Array<[String:String]> = []
         for item in items {
             if item["type"] == "top" {

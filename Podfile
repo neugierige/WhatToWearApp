@@ -7,6 +7,7 @@ target 'WhatToWearApp' do
 
   # Pods for WhatToWearApp
   pod 'Firebase'
+  pod 'Firebase/Storage'
 
   target 'WhatToWearAppTests' do
     inherit! :search_paths

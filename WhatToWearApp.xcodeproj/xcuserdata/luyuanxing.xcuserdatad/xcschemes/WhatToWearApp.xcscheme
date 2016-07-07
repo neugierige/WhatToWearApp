@@ -20,6 +20,34 @@
                ReferencedContainer = "container:WhatToWearApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B1D3016F1D29E11A006811F5"
+               BuildableName = "WhatToWearAppTests.xctest"
+               BlueprintName = "WhatToWearAppTests"
+               ReferencedContainer = "container:WhatToWearApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B1D3017A1D29E11A006811F5"
+               BuildableName = "WhatToWearAppUITests.xctest"
+               BlueprintName = "WhatToWearAppUITests"
+               ReferencedContainer = "container:WhatToWearApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
