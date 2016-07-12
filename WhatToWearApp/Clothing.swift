@@ -11,7 +11,7 @@ import Firebase
 
 class Clothing {
     
-//    var rootRef = FIRDatabase.database().reference()
+    var rootRef = FIRDatabase.database().reference()
     
     var item: [String:String]? = [:]
     

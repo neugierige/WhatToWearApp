@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var outfit: String = String()
-//    let ref = Clothing().rootRef
+    let ref = Clothing().rootRef
     
     var listOfTops = Clothing().getTops()
     var listOfBottoms = Clothing().getBottoms()
@@ -100,8 +100,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getOutfit()
-//        let test = ref.child("4")
-//        print("WHAT IS THE VALUE FOR ITEM 5\(test)")
+        
     }
     
     func getOutfit() {
@@ -118,6 +117,8 @@ class ViewController: UIViewController {
             print("randomBottom is \(randomBottom)")
             self.display.text = "top:" + "\r\n" + "\(top["color"]!) \(top["style"]!) from \(top["brand"]!)" + "\r\n" + "\r\n" + "bottom:" + "\r\n" + "\(bottom["color"]!) \(bottom["style"]!) from \(bottom["brand"]!)"
         }
+        let test = ref.child("4")
+        print("WHAT IS THE VALUE FOR ITEM 5 \(test.)")
     }
     
     func randomNum(someArray: Array<[String:String]>) -> Int {
