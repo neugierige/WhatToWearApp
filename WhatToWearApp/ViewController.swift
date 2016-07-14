@@ -33,11 +33,11 @@ class ViewController: UIViewController {
         
         //
         self.refreshButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(refreshButton)
-        view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: -30))
-        view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: NSLayoutAttribute.width, multiplier: 0.5, constant: -20))
-        view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 60))
+        self.view.addSubview(refreshButton)
+        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: -30))
+        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: NSLayoutAttribute.width, multiplier: 0.5, constant: -20))
+        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 60))
         self.refreshButton.layer.cornerRadius = 10
         self.refreshButton.layer.borderWidth = 2
         self.refreshButton.layer.borderColor = UIColor.black().cgColor
@@ -62,11 +62,11 @@ class ViewController: UIViewController {
         
         //
         self.voteGood.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(voteGood)
-        view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .right, relatedBy: .equal, toItem: self.refreshButton, attribute: .left, multiplier: 1.0, constant: -30))
-        view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .centerY, relatedBy: .equal, toItem: self.refreshButton, attribute: .centerY, multiplier: 1.0, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 45))
-        view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .height, relatedBy: .equal, toItem: self.refreshButton, attribute: .height, multiplier: 1.0, constant: -5))
+        self.view.addSubview(voteGood)
+        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .right, relatedBy: .equal, toItem: self.refreshButton, attribute: .left, multiplier: 1.0, constant: -30))
+        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .centerY, relatedBy: .equal, toItem: self.refreshButton, attribute: .centerY, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 45))
+        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .height, relatedBy: .equal, toItem: self.refreshButton, attribute: .height, multiplier: 1.0, constant: -5))
         self.voteGood.isUserInteractionEnabled = true
         self.voteGood.setImage(#imageLiteral(resourceName: "thumbsup"), for: [])
         self.voteGood.addTarget(self, action: #selector(ViewController.thumbsUp), for: .touchUpInside)
@@ -74,11 +74,11 @@ class ViewController: UIViewController {
         
         //
         self.voteBad.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(voteBad)
-        view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .left, relatedBy: .equal, toItem: self.refreshButton, attribute: .right, multiplier: 1.0, constant: 30))
-        view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .centerY, relatedBy: .equal, toItem: self.refreshButton, attribute: .centerY, multiplier: 1.0, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 45))
-        view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .height, relatedBy: .equal, toItem: self.refreshButton, attribute: .height, multiplier: 1.0, constant: -5))
+        self.view.addSubview(voteBad)
+        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .left, relatedBy: .equal, toItem: self.refreshButton, attribute: .right, multiplier: 1.0, constant: 30))
+        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .centerY, relatedBy: .equal, toItem: self.refreshButton, attribute: .centerY, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 45))
+        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .height, relatedBy: .equal, toItem: self.refreshButton, attribute: .height, multiplier: 1.0, constant: -5))
         self.voteBad.setTitleColor(UIColor.red(), for: [])
         self.voteBad.titleLabel?.textAlignment = .center
         self.voteBad.titleLabel?.numberOfLines = 0
@@ -88,9 +88,9 @@ class ViewController: UIViewController {
         
         //
         self.addItem.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(addItem)
-        view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 20))
-        view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: -20))
+        self.view.addSubview(addItem)
+        self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 20))
+        self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: -20))
         self.addItem.setTitle("+", for: [])
         self.addItem.setTitleColor(UIColor.black(), for: [])
         self.addItem.addTarget(self, action: #selector(ViewController.itemAdd), for: .touchUpInside)
@@ -118,7 +118,7 @@ class ViewController: UIViewController {
             self.display.text = "top:" + "\r\n" + "\(top["color"]!) \(top["style"]!) from \(top["brand"]!)" + "\r\n" + "\r\n" + "bottom:" + "\r\n" + "\(bottom["color"]!) \(bottom["style"]!) from \(bottom["brand"]!)"
         }
         let test = ref.child("4")
-        print("WHAT IS THE VALUE FOR ITEM 5 \(test.)")
+        print("WHAT IS THE VALUE FOR ITEM 5 \(test)")
     }
     
     func randomNum(someArray: Array<[String:String]>) -> Int {
