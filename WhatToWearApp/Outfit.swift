@@ -10,6 +10,6 @@ import Foundation
 
 class Outfit {
     
-    var outfit = [Clothing()]
+    
     
 }

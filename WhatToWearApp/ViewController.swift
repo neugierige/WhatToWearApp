@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     
     var outfit: String = String()
-    let ref = Clothing().rootRef
     
     var listOfTops = Clothing().getTops()
     var listOfBottoms = Clothing().getBottoms()
@@ -95,6 +94,8 @@ class ViewController: UIViewController {
         self.addItem.setTitleColor(UIColor.black(), for: [])
         self.addItem.addTarget(self, action: #selector(ViewController.itemAdd), for: .touchUpInside)
         
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
     }
     
     override func viewDidLoad() {
@@ -117,8 +118,6 @@ class ViewController: UIViewController {
             print("randomBottom is \(randomBottom)")
             self.display.text = "top:" + "\r\n" + "\(top["color"]!) \(top["style"]!) from \(top["brand"]!)" + "\r\n" + "\r\n" + "bottom:" + "\r\n" + "\(bottom["color"]!) \(bottom["style"]!) from \(bottom["brand"]!)"
         }
-        let test = ref.child("4")
-        print("WHAT IS THE VALUE FOR ITEM 5 \(test)")
     }
     
     func randomNum(someArray: Array<[String:String]>) -> Int {
@@ -149,7 +148,10 @@ class ViewController: UIViewController {
     }
     
     func itemAdd() {
-        performSegue(withIdentifier: "addItemSegue", sender: self)
+        let addItemVC = AddItemViewController()
+        self.navigationController?.show(addItemVC, sender: nil)
+        //self.present(addItemVC, animated: true, completion: {
+        //})
     }
     
     override func didReceiveMemoryWarning() {

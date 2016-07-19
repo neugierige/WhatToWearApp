@@ -7,11 +7,25 @@
 //
 
 import Foundation
-import Firebase
 
 class Clothing {
     
-    var rootRef = FIRDatabase.database().reference()
+    var brand = String()
+    var color = String()
+    var workAppropriate = Bool()
+    enum Seasonality {
+        case Spring
+        case Summer
+        case Fall
+        case Winter
+        case Yearlong
+    }
+    enum Category {
+        case Top
+        case Bottom
+//        case OnePiece
+//        case Shoes
+    }
     
     var item: [String:String]? = [:]
     
@@ -27,8 +41,6 @@ class Clothing {
         ["type":"bottom", "style": "shorts", "color":"navy", "brand":"GAP"],
         ["type":"bottom", "style": "skirt", "color":"navy", "brand":"J.Crew"]
     ]
-    
-    
     
     
     func getTops() -> Array<[String:String]> {

@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="51.724137931034484"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Item View Controller-->
         <scene sceneID="SVQ-wL-WUY">
             <objects>
-                <viewController id="7rQ-vK-2me" sceneMemberID="viewController">
+                <viewController id="7rQ-vK-2me" customClass="AddItemViewController" customModule="WhatToWearApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lcm-bD-k91"/>
                         <viewControllerLayoutGuide type="bottom" id="DMC-jF-ZcI"/>
