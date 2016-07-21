@@ -12,14 +12,17 @@ class MainViewController: UIViewController {
     
     var outfit: String = String()
     
+    let clothingClass = Clothing()
     var listOfTops = Clothing().getTops()
     var listOfBottoms = Clothing().getBottoms()
+    var listOfOnepieces = Clothing().getOnePiece()
     
     var badMatches: Array<[String:String]> = []
     var goodMatches: Array<[String:String]> = []
     
     var randomTop = Int()
     var randomBottom = Int()
+    var randomOnepiece = Int()
     
     var display = UILabel()
     var refreshButton = UIButton()
@@ -90,8 +93,8 @@ class MainViewController: UIViewController {
         self.addItem.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(addItem)
         self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 20))
-        self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: -20))
-        self.addItem.setTitle("+", for: [])
+        self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: -10))
+        self.addItem.setImage(#imageLiteral(resourceName: "gear"), for: [])
         self.addItem.setTitleColor(UIColor.black(), for: [])
         self.addItem.addTarget(self, action: #selector(MainViewController.itemAdd), for: .touchUpInside)
         
@@ -104,6 +107,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //TODO: get the count of cases from Clothing class
         getOutfit()
     }
     
@@ -122,6 +126,36 @@ class MainViewController: UIViewController {
             self.display.text = "top:" + "\r\n" + "\(top["color"]!) \(top["style"]!) from \(top["brand"]!)" + "\r\n" + "\r\n" + "bottom:" + "\r\n" + "\(bottom["color"]!) \(bottom["style"]!) from \(bottom["brand"]!)"
         }
     }
+
+//    func getOutfitType() {
+//        let num = Int(arc4random_uniform(UInt32(2)) + 1)
+//        getOutfit(caseNum: num)
+//    }
+        
+    
+//    func getOutfit(caseNum: Int) {
+//        if caseNum == 1 {
+//            self.randomTop = randomNum(someArray: listOfTops)
+//            self.randomBottom = randomNum(someArray: listOfBottoms)
+//            if (badMatches.contains { $0 == [listOfTops[randomTop], listOfBottoms[randomBottom]]} == true) {
+//                getOutfitType()
+//            } else if badMatches.count == listOfTops.count * listOfBottoms.count{
+//                self.display.text = "no more matches possible :-("
+//            } else {
+//                var top = listOfTops[randomTop]
+//                var bottom = listOfBottoms[randomBottom]
+//                print("randomTop is \(randomTop)")
+//                print("randomBottom is \(randomBottom)")
+//                self.display.text = "top:" + "\r\n" + "\(top["color"]!) \(top["style"]!) from \(top["brand"]!)" + "\r\n" + "\r\n" + "bottom:" + "\r\n" + "\(bottom["color"]!) \(bottom["style"]!) from \(bottom["brand"]!)"
+//                return
+//            }
+//        } else if caseNum == 2 {
+//            self.randomOnepiece = randomNum(someArray: listOfOnepieces)
+//            var onePiece = listOfOnepieces[randomOnepiece]
+//            self.display.text = "one piece:" + "\r\n" + "\(onePiece["color"]!) \(onePiece["style"]!) from \(onePiece["brand"]!)"
+//            return
+//        }
+//    }
     
     func randomNum(someArray: Array<[String:String]>) -> Int {
         let arraySize: Int = someArray.count

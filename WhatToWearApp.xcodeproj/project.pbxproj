@@ -10,7 +10,7 @@
 		141D581A8E1700D3D21C2B99 /* Pods_WhatToWearAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F010A67A5A0894E0D6E66 /* Pods_WhatToWearAppUITests.framework */; };
 		6CFF7EB78E5476C94E89B305 /* Pods_WhatToWearAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABFD1FD4CCB5BE94DA49D1C /* Pods_WhatToWearAppTests.framework */; };
 		B1218A751D398C09000AB7BA /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1218A741D398C09000AB7BA /* AddItemViewController.swift */; };
-		B19FDCD61D331ABA00966991 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FDCD51D331ABA00966991 /* NavigationController.swift */; };
+		B16807001D4148C1005639F6 /* OutfitGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16806FF1D4148C1005639F6 /* OutfitGenerator.swift */; };
 		B1D301601D29E11A006811F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3015F1D29E11A006811F5 /* AppDelegate.swift */; };
 		B1D301621D29E11A006811F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D301611D29E11A006811F5 /* MainViewController.swift */; };
 		B1D301651D29E11A006811F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D301631D29E11A006811F5 /* Main.storyboard */; };
@@ -54,7 +54,7 @@
 		7E5375D022C31ED690B7FD8C /* Pods-WhatToWearAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToWearAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToWearAppUITests/Pods-WhatToWearAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		904175A0B951CAE68CBA904F /* Pods-WhatToWearAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToWearAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToWearAppTests/Pods-WhatToWearAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1218A741D398C09000AB7BA /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
-		B19FDCD51D331ABA00966991 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		B16806FF1D4148C1005639F6 /* OutfitGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitGenerator.swift; sourceTree = "<group>"; };
 		B1D3015C1D29E11A006811F5 /* WhatToWearApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToWearApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D3015F1D29E11A006811F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1D301611D29E11A006811F5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +156,6 @@
 				B1E48CAA1D3ECC1300AF7AFA /* Models */,
 				B1218A741D398C09000AB7BA /* AddItemViewController.swift */,
 				B1D301611D29E11A006811F5 /* MainViewController.swift */,
-				B19FDCD51D331ABA00966991 /* NavigationController.swift */,
 				B1D3015F1D29E11A006811F5 /* AppDelegate.swift */,
 				B1D301631D29E11A006811F5 /* Main.storyboard */,
 				B1D301661D29E11A006811F5 /* Assets.xcassets */,
@@ -193,6 +192,7 @@
 				B1D3018D1D29E16E006811F5 /* Clothing.swift */,
 				B1E48CAB1D3ECC5C00AF7AFA /* TopClass.swift */,
 				B1E48CAD1D3ECD4900AF7AFA /* BottomClass.swift */,
+				B16806FF1D4148C1005639F6 /* OutfitGenerator.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -470,13 +470,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1D301621D29E11A006811F5 /* MainViewController.swift in Sources */,
-				B19FDCD61D331ABA00966991 /* NavigationController.swift in Sources */,
 				B1E48CAE1D3ECD4900AF7AFA /* BottomClass.swift in Sources */,
 				B1E48CAC1D3ECC5C00AF7AFA /* TopClass.swift in Sources */,
 				B1D3018E1D29E16E006811F5 /* Clothing.swift in Sources */,
 				B1D301901D29E1B8006811F5 /* Outfit.swift in Sources */,
 				B1218A751D398C09000AB7BA /* AddItemViewController.swift in Sources */,
 				B1EB94C41D2F317D00B06429 /* Match.swift in Sources */,
+				B16807001D4148C1005639F6 /* OutfitGenerator.swift in Sources */,
 				B1D301601D29E11A006811F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +551,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -570,7 +571,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -599,6 +600,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -612,7 +614,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -626,6 +628,7 @@
 			baseConfigurationReference = 0952EBEADC8DD7FCBE3144F6 /* Pods-WhatToWearApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WhatToWearApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -640,6 +643,7 @@
 			baseConfigurationReference = 539011CB3809D20E6FD36E60 /* Pods-WhatToWearApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WhatToWearApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -654,6 +658,7 @@
 			baseConfigurationReference = 904175A0B951CAE68CBA904F /* Pods-WhatToWearAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WhatToWearAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lxing.WhatToWearAppTests;
@@ -668,6 +673,7 @@
 			baseConfigurationReference = 24AF8FD0683A1D1F747F92C9 /* Pods-WhatToWearAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WhatToWearAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lxing.WhatToWearAppTests;

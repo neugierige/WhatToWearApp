@@ -20,15 +20,17 @@ class Clothing {
         case Winter
         case Yearlong
     }
-    enum Category {
-        case Top
-        case Bottom
-//        case OnePiece
-//        case Shoes
+    
+    enum OutfitCategory {
+        case TopBottom
+        case LayeredTop
+        case OnePiece
     }
     
     var item: [String:String]? = [:]
     
+    
+    //********** SAMPLE DATA **********//
     var items = [
         ["type":"top", "style": "colarless", "color":"white", "brand":"Ann Taylor"],
         ["type":"top", "style": "long sleeve", "color":"black", "brand":"Uniqlo"],
@@ -39,14 +41,16 @@ class Clothing {
         ["type":"bottom", "style": "jeans", "color":"grey", "brand":"Forever 21"],
         ["type":"bottom", "style": "pants", "color":"black", "brand":"Uniqlo"],
         ["type":"bottom", "style": "shorts", "color":"navy", "brand":"GAP"],
-        ["type":"bottom", "style": "skirt", "color":"navy", "brand":"J.Crew"]
+        ["type":"bottom", "style": "skirt", "color":"navy", "brand":"J.Crew"],
+        ["type":"onepiece", "style": "dress", "color":"black & navy", "brand":"GAP"],
+        ["type":"onepiece", "style": "dress", "color":"black", "brand":"GAP"],
+        ["type":"onepiece", "style": "dress", "color":"mint", "brand":"J.Crew"],
+        ["type":"onepiece", "style": "dress", "color":"navy", "brand":"Uniqlo"]
     ]
     
     
     func getTops() -> Array<[String:String]> {
-        
         var topsArray: Array<[String:String]> = []
-        
         for item in items {
             if item["type"] == "top" {
                 topsArray.append(item)
@@ -64,11 +68,19 @@ class Clothing {
             if item["type"] == "bottom" {
                 bottomsArray.append(item)
                 //print("the bottom is a \(item["color"]) \(item["style"]) from \(item["brand"])")
-            } else {
-                //print("add some bottoms")
             }
         }
         return bottomsArray
+    }
+    
+    func getOnePiece() -> Array<[String:String]> {
+        var onepieceArray: Array<[String:String]> = []
+        for item in items {
+            if item["type"] == "onepiece" {
+                onepieceArray.append(item)
+            }
+        }
+        return onepieceArray
     }
     
 }

@@ -31,6 +31,8 @@ class AddItemViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     
+    
+    //************* UITableView Stuffs *************//
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -45,6 +47,20 @@ class AddItemViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.textLabel?.text = "\(item["type"]!): \(item["color"]!) \(item["style"]!) from \(item["brand"]!)"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            clothing.items.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        }
+    }
+    
+    
+    
     
     
 }

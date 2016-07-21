@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Top :Clothing {
+class Top: Clothing {
     
     
     
