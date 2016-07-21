@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     var outfit: String = String()
     
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         self.refreshButton.isUserInteractionEnabled = true
         self.refreshButton.setTitle("refresh!", for: [])
         self.refreshButton.setTitleColor(UIColor.black(), for: [])
-        self.refreshButton.addTarget(self, action: #selector(ViewController.getOutfit), for: .touchUpInside)
+        self.refreshButton.addTarget(self, action: #selector(MainViewController.getOutfit), for: .touchUpInside)
         
         //
         self.display.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .height, relatedBy: .equal, toItem: self.refreshButton, attribute: .height, multiplier: 1.0, constant: -5))
         self.voteGood.isUserInteractionEnabled = true
         self.voteGood.setImage(#imageLiteral(resourceName: "thumbsup"), for: [])
-        self.voteGood.addTarget(self, action: #selector(ViewController.thumbsUp), for: .touchUpInside)
+        self.voteGood.addTarget(self, action: #selector(MainViewController.thumbsUp), for: .touchUpInside)
         
         
         //
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         self.voteBad.titleLabel?.numberOfLines = 0
         self.voteBad.isUserInteractionEnabled = true
         self.voteBad.setImage(#imageLiteral(resourceName: "thumbsdown"), for: [])
-        self.voteBad.addTarget(self, action: #selector(ViewController.thumbsDown), for: .touchUpInside)
+        self.voteBad.addTarget(self, action: #selector(MainViewController.thumbsDown), for: .touchUpInside)
         
         //
         self.addItem.translatesAutoresizingMaskIntoConstraints = false
@@ -92,10 +92,8 @@ class ViewController: UIViewController {
         self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: -20))
         self.addItem.setTitle("+", for: [])
         self.addItem.setTitleColor(UIColor.black(), for: [])
-        self.addItem.addTarget(self, action: #selector(ViewController.itemAdd), for: .touchUpInside)
-        
+        self.addItem.addTarget(self, action: #selector(MainViewController.itemAdd), for: .touchUpInside)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
     }
     
     override func viewDidLoad() {
@@ -149,10 +147,13 @@ class ViewController: UIViewController {
     
     func itemAdd() {
         let addItemVC = AddItemViewController()
-        self.navigationController?.show(addItemVC, sender: nil)
-        //self.present(addItemVC, animated: true, completion: {
-        //})
+        self.navigationController?.present(addItemVC, animated: true, completion: { 
+            
+        })
+        
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
