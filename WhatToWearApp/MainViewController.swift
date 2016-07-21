@@ -27,8 +27,9 @@ class MainViewController: UIViewController {
     var voteGood = UIButton()
     var addItem = UIButton()
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         
         //
         self.refreshButton.translatesAutoresizingMaskIntoConstraints = false
@@ -93,13 +94,17 @@ class MainViewController: UIViewController {
         self.addItem.setTitle("+", for: [])
         self.addItem.setTitleColor(UIColor.black(), for: [])
         self.addItem.addTarget(self, action: #selector(MainViewController.itemAdd), for: .touchUpInside)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getOutfit()
-        
     }
     
     func getOutfit() {
@@ -147,13 +152,12 @@ class MainViewController: UIViewController {
     
     func itemAdd() {
         let addItemVC = AddItemViewController()
-        self.navigationController?.present(addItemVC, animated: true, completion: { 
-            
-        })
-        
+        self.navigationController?.pushViewController(addItemVC, animated: true)
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -8,8 +8,10 @@
 
 import UIKit
 
-class AddItemViewController :UIViewController {
+class AddItemViewController: UIViewController {
     
+    let mainVC = MainViewController()
+    let table = UITableView()
     
     override func viewWillAppear(_ animated: Bool) {
 
@@ -17,6 +19,7 @@ class AddItemViewController :UIViewController {
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.red()
+        mainVC.navigationController?.setToolbarHidden(false, animated: false)
     }
     
     
