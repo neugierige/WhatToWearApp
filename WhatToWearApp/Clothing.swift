@@ -29,7 +29,7 @@ class Clothing {
     
     var item: [String:String]? = [:]
     
-    var items: Array<[String:String]> = [
+    var items = [
         ["type":"top", "style": "colarless", "color":"white", "brand":"Ann Taylor"],
         ["type":"top", "style": "long sleeve", "color":"black", "brand":"Uniqlo"],
         ["type":"top", "style": "T", "color":"white", "brand":"GAP"],

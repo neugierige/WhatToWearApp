@@ -25,7 +25,9 @@ class AddItemViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     override func viewDidLoad() {
-        
+        table.dataSource = self
+        table.delegate = self
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     
@@ -39,12 +41,10 @@ class AddItemViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
+        var item = clothing.items[indexPath.row]
+        cell.textLabel?.text = "\(item["type"]!): \(item["color"]!) \(item["style"]!) from \(item["brand"]!)"
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
     
     
 }
