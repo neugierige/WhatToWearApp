@@ -96,7 +96,7 @@ class MainViewController: UIViewController {
         self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: -10))
         self.addItem.setImage(#imageLiteral(resourceName: "gear"), for: [])
         self.addItem.setTitleColor(UIColor.black(), for: [])
-        self.addItem.addTarget(self, action: #selector(MainViewController.itemAdd), for: .touchUpInside)
+        self.addItem.addTarget(self, action: #selector(openItemsTable), for: .touchUpInside)
         
     }
     
@@ -184,9 +184,9 @@ class MainViewController: UIViewController {
         print("the good match is \(goodMatch)")
     }
     
-    func itemAdd() {
-        let addItemVC = AddItemViewController()
-        self.navigationController?.pushViewController(addItemVC, animated: true)
+    func openItemsTable() {
+        let itemsTableVC = ItemsTableViewController()
+        self.navigationController?.pushViewController(itemsTableVC, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

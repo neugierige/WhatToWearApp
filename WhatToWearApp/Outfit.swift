@@ -10,6 +10,13 @@ import Foundation
 
 class Outfit {
     
+    var good = Bool()
+    var bad = Bool()
     
+    enum OutfitCategory {
+        case TopBottom
+        case LayeredTop
+        case OnePiece
+    }
     
 }

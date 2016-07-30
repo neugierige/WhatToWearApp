@@ -10,22 +10,31 @@ import Foundation
 
 class Clothing {
     
-    var brand = String()
-    var color = String()
-    var workAppropriate = Bool()
-    enum Seasonality {
-        case Spring
-        case Summer
-        case Fall
-        case Winter
-        case Yearlong
-    }
+//    let brand, color: String?
+//    let workAppropriate, layerable: Bool?
+//    
+//    init(brand:String, color: String, workAppropriate: Bool, layerable: Bool) {
+//        self.brand = brand
+//        self.color = color
+//        self.workAppropriate = workAppropriate
+//        self.layerable = layerable
+//    }
+//    
+//    enum ClothingCategory {
+//        case Top
+//        case Bottom
+//        case OnePiece
+//        case Shoes
+//    }
+//    
+//    enum Season {
+//        case Spring
+//        case Summer
+//        case Fall
+//        case Winter
+//        case Yearlong
+//    }
     
-    enum OutfitCategory {
-        case TopBottom
-        case LayeredTop
-        case OnePiece
-    }
     
     var item: [String:String]? = [:]
     
