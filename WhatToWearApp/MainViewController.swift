@@ -12,10 +12,9 @@ class MainViewController: UIViewController {
     
     var outfit: String = String()
     
-    let clothingClass = Clothing()
-    var listOfTops = Clothing().getTops()
-    var listOfBottoms = Clothing().getBottoms()
-    var listOfOnepieces = Clothing().getOnePiece()
+    var listOfTops = OutfitGenerator().getTops()
+    var listOfBottoms = OutfitGenerator().getBottoms()
+    var listOfOnepieces = OutfitGenerator().getOnePiece()
     
     var badMatches: Array<[String:String]> = []
     var goodMatches: Array<[String:String]> = []

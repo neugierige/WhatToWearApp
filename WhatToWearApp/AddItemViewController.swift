@@ -10,9 +10,14 @@ import UIKit
 
 class AddItemViewController: UIViewController {
     
+    let clothingType = UIPickerView()
+    let brandField = UITextField()
+    let color = UITextField()
+    let workAppropriate = UISwitch()
+    
     
     override func viewDidLoad() {
-        print("woooooooooooo")
+        self.view.backgroundColor = UIColor.white()
     }
     
     override func viewWillAppear(_ animated: Bool) {
