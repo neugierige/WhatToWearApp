@@ -17,7 +17,9 @@ class AddItemViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor.white()
+        self.view.backgroundColor = UIColor.whiteColor()
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,29 +30,32 @@ class AddItemViewController: UIViewController {
 //        var responseDict: NSDictionary = JSONSerialization.JSONObjectWithData(responseData,options: NSJSONReadingOptions.MutableContainers, error:nil) as NSDictionary
 //    }
     
-    func post_request() {
-        let url_to_request = "http://localhost:3000/Clothing"
-        let url:NSURL = NSURL(string: url_to_request)!
-        let session = URLSession.shared()
-        
-        let request = NSMutableURLRequest(url: url as URL)
-        request.httpMethod = "POST"
-        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
-        
-        let paramString = "data=Hello"
-        request.httpBody = paramString.data(using: String.Encoding.utf8)
-        
-        let task = session.dataTask(with: request as URLRequest) {
-            (data, response, error) in
-            guard let _:NSData = data, let _:URLResponse = response  where error == nil else {
-                print("error")
-                return
-            }
-            let dataString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print("*******dataString is ")
-            print(dataString)
-        }
-        task.resume()
-    }
+//    func post_request() {
+//        let url_to_request = "https://whattowearapi.herokuapp.com/clothings"
+//        let url:NSURL = NSURL(string: url_to_request)!
+//        let session = URLSession.shared()
+//        
+//        let request = NSMutableURLRequest(url: url as URL)
+//        request.httpMethod = "GET"
+//        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
+//        
+//        let paramString = "data=Hello"
+//        request.httpBody = paramString.data(using: String.Encoding.utf8)
+//        
+//        let task = session.dataTask(with: request as URLRequest) {
+//            (data, response, error) in
+//            guard let _:NSData = data, let _:URLResponse = response  where error == nil else {
+//                print("error")
+//                return
+//            }
+//            let dataString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+//            print("*******dataString is ")
+//            print(dataString)
+//        }
+//        task.resume()
+//    }
+    
+    
+    
     
 }

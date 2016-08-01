@@ -273,12 +273,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					93098E93B06F8C956FB08E7E537AFB10 = {
-						DevelopmentTeam = LAF286FY7D;
-						DevelopmentTeamName = "Luyuan Xing (Personal Team)";
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";

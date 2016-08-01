@@ -8,7 +8,6 @@ target 'WhatToWearApp' do
   # Pods for WhatToWearApp
   pod 'Alamofire', '~> 3.4'
   pod 'SwiftyJSON'
-
   
 
   target 'WhatToWearAppTests' do
@@ -22,3 +21,4 @@ target 'WhatToWearApp' do
   end
 
 end
+

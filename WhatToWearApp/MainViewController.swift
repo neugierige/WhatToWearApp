@@ -36,66 +36,66 @@ class MainViewController: UIViewController {
         //
         self.refreshButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(refreshButton)
-        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: -30))
-        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: NSLayoutAttribute.width, multiplier: 0.5, constant: -20))
-        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 60))
+        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -30))
+        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 0.5, constant: -20))
+        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 60))
         self.refreshButton.layer.cornerRadius = 10
         self.refreshButton.layer.borderWidth = 2
-        self.refreshButton.layer.borderColor = UIColor.black().cgColor
-        self.refreshButton.backgroundColor = UIColor.clear()
-        self.refreshButton.isUserInteractionEnabled = true
-        self.refreshButton.setTitle("refresh!", for: [])
-        self.refreshButton.setTitleColor(UIColor.black(), for: [])
-        self.refreshButton.addTarget(self, action: #selector(MainViewController.getOutfit), for: .touchUpInside)
+        self.refreshButton.layer.borderColor = UIColor.blackColor().CGColor
+        self.refreshButton.backgroundColor = UIColor.clearColor()
+        self.refreshButton.userInteractionEnabled = true
+        self.refreshButton.setTitle("refresh!", forState: [])
+        self.refreshButton.setTitleColor(UIColor.blackColor(), forState: [])
+        self.refreshButton.addTarget(self, action: #selector(MainViewController.getOutfit), forControlEvents: .TouchUpInside)
         
         //
         self.display.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(display)
         
-        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: -60))
-        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 0.75, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 0.33, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: -60))
+        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 0.75, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Height, multiplier: 0.33, constant: 0))
         self.display.layer.borderWidth = 1
-        self.display.layer.borderColor = UIColor.black().cgColor
-        self.display.textAlignment = .center
+        self.display.layer.borderColor = UIColor.blackColor().CGColor
+        self.display.textAlignment = .Center
         self.display.numberOfLines = 0
         
         //
         self.voteGood.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(voteGood)
-        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .right, relatedBy: .equal, toItem: self.refreshButton, attribute: .left, multiplier: 1.0, constant: -30))
-        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .centerY, relatedBy: .equal, toItem: self.refreshButton, attribute: .centerY, multiplier: 1.0, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 45))
-        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .height, relatedBy: .equal, toItem: self.refreshButton, attribute: .height, multiplier: 1.0, constant: -5))
-        self.voteGood.isUserInteractionEnabled = true
-        self.voteGood.setImage(#imageLiteral(resourceName: "thumbsup"), for: [])
-        self.voteGood.addTarget(self, action: #selector(MainViewController.thumbsUp), for: .touchUpInside)
+        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .Right, relatedBy: .Equal, toItem: self.refreshButton, attribute: .Left, multiplier: 1.0, constant: -30))
+        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .CenterY, relatedBy: .Equal, toItem: self.refreshButton, attribute: .CenterY, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 45))
+        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .Height, relatedBy: .Equal, toItem: self.refreshButton, attribute: .Height, multiplier: 1.0, constant: -5))
+        self.voteGood.userInteractionEnabled = true
+        self.voteGood.setImage(UIImage(named: "thumbsup"), forState: [])
+        self.voteGood.addTarget(self, action: #selector(MainViewController.thumbsUp), forControlEvents: .TouchUpInside)
         
         
         //
         self.voteBad.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(voteBad)
-        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .left, relatedBy: .equal, toItem: self.refreshButton, attribute: .right, multiplier: 1.0, constant: 30))
-        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .centerY, relatedBy: .equal, toItem: self.refreshButton, attribute: .centerY, multiplier: 1.0, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 45))
-        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .height, relatedBy: .equal, toItem: self.refreshButton, attribute: .height, multiplier: 1.0, constant: -5))
-        self.voteBad.setTitleColor(UIColor.red(), for: [])
-        self.voteBad.titleLabel?.textAlignment = .center
+        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .Left, relatedBy: .Equal, toItem: self.refreshButton, attribute: .Right, multiplier: 1.0, constant: 30))
+        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .CenterY, relatedBy: .Equal, toItem: self.refreshButton, attribute: .CenterY, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 45))
+        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .Height, relatedBy: .Equal, toItem: self.refreshButton, attribute: .Height, multiplier: 1.0, constant: -5))
+        self.voteBad.setTitleColor(UIColor.redColor(), forState: [])
+        self.voteBad.titleLabel?.textAlignment = .Center
         self.voteBad.titleLabel?.numberOfLines = 0
-        self.voteBad.isUserInteractionEnabled = true
-        self.voteBad.setImage(#imageLiteral(resourceName: "thumbsdown"), for: [])
-        self.voteBad.addTarget(self, action: #selector(MainViewController.thumbsDown), for: .touchUpInside)
+        self.voteBad.userInteractionEnabled = true
+        self.voteBad.setImage(UIImage(named: "thumbsdown"), forState: [])
+        self.voteBad.addTarget(self, action: #selector(MainViewController.thumbsDown), forControlEvents: .TouchUpInside)
         
         //
         self.addItem.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(addItem)
-        self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 20))
-        self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: -10))
-        self.addItem.setImage(#imageLiteral(resourceName: "gear"), for: [])
-        self.addItem.setTitleColor(UIColor.black(), for: [])
-        self.addItem.addTarget(self, action: #selector(openItemsTable), for: .touchUpInside)
+        self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 20))
+        self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -10))
+        self.addItem.setImage(UIImage(named: "gear"), forState: [])
+        self.addItem.setTitleColor(UIColor.blackColor(), forState: [])
+        self.addItem.addTarget(self, action: #selector(openItemsTable), forControlEvents: .TouchUpInside)
         
     }
     
@@ -111,8 +111,8 @@ class MainViewController: UIViewController {
     }
     
     func getOutfit() {
-        self.randomTop = randomNum(someArray: listOfTops)
-        self.randomBottom = randomNum(someArray: listOfBottoms)
+        self.randomTop = randomNum(listOfTops)
+        self.randomBottom = randomNum(listOfBottoms)
         if (badMatches.contains { $0 == [listOfTops[randomTop], listOfBottoms[randomBottom]]} == true) {
             getOutfit()
         } else if badMatches.count == listOfTops.count * listOfBottoms.count{
@@ -163,13 +163,13 @@ class MainViewController: UIViewController {
     }
     
     func thumbsDown() {
-        addBadMatch(badMatch: [listOfTops[randomTop], listOfBottoms[randomBottom]])
+        addBadMatch([listOfTops[randomTop], listOfBottoms[randomBottom]])
         print("badMatches are \(badMatches)")
         getOutfit()
     }
     
     func thumbsUp() {
-        addGoodMatch(goodMatch: [listOfTops[randomTop], listOfBottoms[randomBottom]])
+        addGoodMatch([listOfTops[randomTop], listOfBottoms[randomBottom]])
         print("goodMatches are \(goodMatches)")
     }
     
