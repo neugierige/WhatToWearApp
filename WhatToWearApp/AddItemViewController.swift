@@ -20,7 +20,7 @@ class AddItemViewController: UIViewController {
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.whiteColor()
-//        
+        
 //        Alamofire.request(.GET, "https://whattowearapi.herokuapp.com/clothings/\(clothingIdNumber).json")
 //            .responseJSON { response in
 //                if let value = response.result.value {
@@ -29,7 +29,7 @@ class AddItemViewController: UIViewController {
 //                    print(json["category"])
 //                }
 //        }
-//        
+        
         let postParams: [String: AnyObject] = [
             "clothing" : [
                 "brand":"Old Navy",
@@ -38,8 +38,8 @@ class AddItemViewController: UIViewController {
                 "seasons":"yearlong",
                 "style":"button-down",
                 "work_approp":false ]]
-        Alamofire.request(.POST, "https://whattowearapi.herokuapp.com/clothings.json", parameters: postParams, encoding: .JSON)
-            .responseJSON { response in
+        Alamofire.request(.POST, "https://whattowearapi.herokuapp.com/clothings", parameters: postParams, encoding: .JSON)
+            .responseString { response in
                 print("here is the request body")
                 print(NSString(data: (response.request?.HTTPBody!)!, encoding: NSUTF8StringEncoding)!)
                 print(response.response)
