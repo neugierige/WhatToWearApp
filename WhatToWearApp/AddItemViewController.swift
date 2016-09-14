@@ -16,47 +16,14 @@ class AddItemViewController: UIViewController {
     let brandField = UITextField()
     let color = UITextField()
     let workAppropriate = UISwitch()
-    let clothingIdNumber : Int = 2
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.whiteColor()
         
-//        Alamofire.request(.GET, "https://whattowearapi.herokuapp.com/clothings/\(clothingIdNumber).json")
-//            .responseJSON { response in
-//                if let value = response.result.value {
-//                    let json = JSON(value)
-//                    print("JSON: \(json)")
-//                    print(json["category"])
-//                }
-//        }
-        
-        let postParams: [String: AnyObject] = [
-            "clothing" : [
-                "brand":"Old Navy",
-                "category":"top",
-                "color":"green",
-                "seasons":"yearlong",
-                "style":"button-down",
-                "work_approp":false ]]
-        Alamofire.request(.POST, "https://whattowearapi.herokuapp.com/clothings", parameters: postParams, encoding: .JSON)
-            .responseString { response in
-                print("here is the request body")
-                print(NSString(data: (response.request?.HTTPBody!)!, encoding: NSUTF8StringEncoding)!)
-                print(response.response)
-                print(response.data)
-                print(response.result)
-                print(response.result.error)
-                
-                if let value = response.result.value {
-                    let json = JSON(value)
-                    print("POST response: \(json)")
-                    print(json["category"])
-                }
-        }
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         
     }
     
@@ -88,8 +55,5 @@ class AddItemViewController: UIViewController {
 //        }
 //        task.resume()
 //    }
-    
-    
-    
     
 }

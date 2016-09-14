@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Outfit {
+struct Outfit {
     
     enum OutfitCategory {
         case TopBottom

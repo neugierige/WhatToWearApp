@@ -12,7 +12,7 @@ class ItemsTableViewController: UIViewController, UITableViewDataSource, UITable
     
     let mainVC = MainViewController()
     let outfitGenerator = OutfitGenerator()
-    let clothing = Clothing()
+//    let clothing = Clothing()
     
     let table = UITableView()
     
@@ -48,7 +48,7 @@ class ItemsTableViewController: UIViewController, UITableViewDataSource, UITable
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return outfitGenerator.items.count
     }
     

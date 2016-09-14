@@ -10,6 +10,7 @@
 		141D581A8E1700D3D21C2B99 /* Pods_WhatToWearAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F010A67A5A0894E0D6E66 /* Pods_WhatToWearAppUITests.framework */; };
 		6CFF7EB78E5476C94E89B305 /* Pods_WhatToWearAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABFD1FD4CCB5BE94DA49D1C /* Pods_WhatToWearAppTests.framework */; };
 		B1218A751D398C09000AB7BA /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1218A741D398C09000AB7BA /* ItemsTableViewController.swift */; };
+		B13D772F1D7F8D5600B0FC29 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D772E1D7F8D5600B0FC29 /* DataManager.swift */; };
 		B154AB821D4BAE1E00894ACE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B154AB811D4BAE1E00894ACE /* AddItemViewController.swift */; };
 		B16807001D4148C1005639F6 /* OutfitGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16806FF1D4148C1005639F6 /* OutfitGenerator.swift */; };
 		B1D301601D29E11A006811F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3015F1D29E11A006811F5 /* AppDelegate.swift */; };
@@ -52,6 +53,7 @@
 		7E5375D022C31ED690B7FD8C /* Pods-WhatToWearAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToWearAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToWearAppUITests/Pods-WhatToWearAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		904175A0B951CAE68CBA904F /* Pods-WhatToWearAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatToWearAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatToWearAppTests/Pods-WhatToWearAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1218A741D398C09000AB7BA /* ItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
+		B13D772E1D7F8D5600B0FC29 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B154AB811D4BAE1E00894ACE /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		B16806FF1D4148C1005639F6 /* OutfitGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitGenerator.swift; sourceTree = "<group>"; };
 		B1D3015C1D29E11A006811F5 /* WhatToWearApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToWearApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				B1E48CAA1D3ECC1300AF7AFA /* Models */,
+				B13D772E1D7F8D5600B0FC29 /* DataManager.swift */,
 				B1D301611D29E11A006811F5 /* MainViewController.swift */,
 				B1218A741D398C09000AB7BA /* ItemsTableViewController.swift */,
 				B154AB811D4BAE1E00894ACE /* AddItemViewController.swift */,
@@ -472,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1D301621D29E11A006811F5 /* MainViewController.swift in Sources */,
+				B13D772F1D7F8D5600B0FC29 /* DataManager.swift in Sources */,
 				B1D3018E1D29E16E006811F5 /* Clothing.swift in Sources */,
 				B1D301901D29E1B8006811F5 /* Outfit.swift in Sources */,
 				B154AB821D4BAE1E00894ACE /* AddItemViewController.swift in Sources */,

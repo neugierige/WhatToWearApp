@@ -25,90 +25,70 @@ class MainViewController: UIViewController {
     
     var display = UILabel()
     var refreshButton = UIButton()
-    var voteBad = UIButton()
-    var voteGood = UIButton()
-    var addItem = UIButton()
+    var voteDown = UIButton()
+    var voteUp = UIButton()
+    var gearIcon = UIButton()
     
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
-        //
-        self.refreshButton.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(refreshButton)
-        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -30))
-        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 0.5, constant: -20))
-        self.view.addConstraint(NSLayoutConstraint(item: refreshButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 60))
-        self.refreshButton.layer.cornerRadius = 10
-        self.refreshButton.layer.borderWidth = 2
-        self.refreshButton.layer.borderColor = UIColor.blackColor().CGColor
-        self.refreshButton.backgroundColor = UIColor.clearColor()
-        self.refreshButton.userInteractionEnabled = true
-        self.refreshButton.setTitle("refresh!", forState: [])
-        self.refreshButton.setTitleColor(UIColor.blackColor(), forState: [])
-        self.refreshButton.addTarget(self, action: #selector(MainViewController.getOutfit), forControlEvents: .TouchUpInside)
-        
-        //
-        self.display.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(display)
-        
-        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: -60))
-        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 0.75, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: display, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Height, multiplier: 0.33, constant: 0))
-        self.display.layer.borderWidth = 1
-        self.display.layer.borderColor = UIColor.blackColor().CGColor
-        self.display.textAlignment = .Center
-        self.display.numberOfLines = 0
-        
-        //
-        self.voteGood.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(voteGood)
-        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .Right, relatedBy: .Equal, toItem: self.refreshButton, attribute: .Left, multiplier: 1.0, constant: -30))
-        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .CenterY, relatedBy: .Equal, toItem: self.refreshButton, attribute: .CenterY, multiplier: 1.0, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 45))
-        self.view.addConstraint(NSLayoutConstraint(item: voteGood, attribute: .Height, relatedBy: .Equal, toItem: self.refreshButton, attribute: .Height, multiplier: 1.0, constant: -5))
-        self.voteGood.userInteractionEnabled = true
-        self.voteGood.setImage(UIImage(named: "thumbsup"), forState: [])
-        self.voteGood.addTarget(self, action: #selector(MainViewController.thumbsUp), forControlEvents: .TouchUpInside)
-        
-        
-        //
-        self.voteBad.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(voteBad)
-        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .Left, relatedBy: .Equal, toItem: self.refreshButton, attribute: .Right, multiplier: 1.0, constant: 30))
-        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .CenterY, relatedBy: .Equal, toItem: self.refreshButton, attribute: .CenterY, multiplier: 1.0, constant: 0))
-        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 45))
-        self.view.addConstraint(NSLayoutConstraint(item: voteBad, attribute: .Height, relatedBy: .Equal, toItem: self.refreshButton, attribute: .Height, multiplier: 1.0, constant: -5))
-        self.voteBad.setTitleColor(UIColor.redColor(), forState: [])
-        self.voteBad.titleLabel?.textAlignment = .Center
-        self.voteBad.titleLabel?.numberOfLines = 0
-        self.voteBad.userInteractionEnabled = true
-        self.voteBad.setImage(UIImage(named: "thumbsdown"), forState: [])
-        self.voteBad.addTarget(self, action: #selector(MainViewController.thumbsDown), forControlEvents: .TouchUpInside)
-        
-        //
-        self.addItem.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(addItem)
-        self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 20))
-        self.view.addConstraint(NSLayoutConstraint(item: addItem, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -10))
-        self.addItem.setImage(UIImage(named: "gear"), forState: [])
-        self.addItem.setTitleColor(UIColor.blackColor(), forState: [])
-        self.addItem.addTarget(self, action: #selector(openItemsTable), forControlEvents: .TouchUpInside)
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TODO: get the count of cases from Clothing class
+        
+        let viewsArray = [display, refreshButton, voteDown, voteUp, gearIcon]
+        for item in viewsArray {
+            view.addSubview(item)
+        }
+        
+        display.translatesAutoresizingMaskIntoConstraints = false
+        view.addConstraint(NSLayoutConstraint(item: display, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: display, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: -60))
+        view.addConstraint(NSLayoutConstraint(item: display, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 0.75, constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: display, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Height, multiplier: 0.33, constant: 0))
+        display.layer.borderWidth = 1
+        display.layer.borderColor = UIColor.blackColor().CGColor
+        display.textAlignment = .Center
+        display.numberOfLines = 0
+        
+        let buffer: CGFloat = 30
+        let fullWidth: CGFloat = view.frame.width - buffer*4
+        let height: CGFloat = 60
+
+        refreshButton.frame = CGRectMake(view.frame.midX - fullWidth/4, view.frame.maxY-(height+buffer), fullWidth/2, height)
+        refreshButton.layer.cornerRadius = 10
+        refreshButton.layer.borderWidth = 2
+        refreshButton.layer.borderColor = UIColor.blackColor().CGColor
+        refreshButton.backgroundColor = UIColor.clearColor()
+        refreshButton.userInteractionEnabled = true
+        refreshButton.setTitle("refresh!", forState: [])
+        refreshButton.setTitleColor(UIColor.blackColor(), forState: [])
+        refreshButton.addTarget(self, action: #selector(MainViewController.getOutfit), forControlEvents: .TouchUpInside)
+        
+        let buttonWidth = height-10
+        voteUp.frame = CGRectMake(buffer, refreshButton.frame.minY, buttonWidth, buttonWidth)
+        voteUp.userInteractionEnabled = true
+        voteUp.setImage(UIImage(named: "thumbsup"), forState: [])
+        voteUp.addTarget(self, action: #selector(MainViewController.thumbsUp), forControlEvents: .TouchUpInside)
+        
+        voteDown.frame = CGRectMake(view.frame.maxX - buttonWidth - buffer, refreshButton.frame.minY, buttonWidth, buttonWidth)
+        voteDown.userInteractionEnabled = true
+        voteDown.setImage(UIImage(named: "thumbsdown"), forState: [])
+        voteDown.addTarget(self, action: #selector(MainViewController.thumbsDown), forControlEvents: .TouchUpInside)
+        
+        gearIcon.translatesAutoresizingMaskIntoConstraints = false
+        view.addConstraint(NSLayoutConstraint(item: gearIcon, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 20))
+        view.addConstraint(NSLayoutConstraint(item: gearIcon, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -10))
+        gearIcon.setImage(UIImage(named: "gear"), forState: [])
+        gearIcon.setTitleColor(UIColor.blackColor(), forState: [])
+        gearIcon.addTarget(self, action: #selector(openItemsTable), forControlEvents: .TouchUpInside)
+        
         getOutfit()
+        
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
     
     func getOutfit() {
         self.randomTop = randomNum(listOfTops)
@@ -188,7 +168,7 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(itemsTableVC, animated: true)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewWillDisappear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
