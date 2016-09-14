@@ -13,6 +13,8 @@
 		B13D772F1D7F8D5600B0FC29 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D772E1D7F8D5600B0FC29 /* DataManager.swift */; };
 		B154AB821D4BAE1E00894ACE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B154AB811D4BAE1E00894ACE /* AddItemViewController.swift */; };
 		B16807001D4148C1005639F6 /* OutfitGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16806FF1D4148C1005639F6 /* OutfitGenerator.swift */; };
+		B1AA71781D89E5F900B69BAC /* BrandPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA71771D89E5F900B69BAC /* BrandPickerViewController.swift */; };
+		B1AA717A1D89E60A00B69BAC /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA71791D89E60A00B69BAC /* ColorPickerViewController.swift */; };
 		B1D301601D29E11A006811F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D3015F1D29E11A006811F5 /* AppDelegate.swift */; };
 		B1D301621D29E11A006811F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D301611D29E11A006811F5 /* MainViewController.swift */; };
 		B1D301651D29E11A006811F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D301631D29E11A006811F5 /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		B13D772E1D7F8D5600B0FC29 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B154AB811D4BAE1E00894ACE /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		B16806FF1D4148C1005639F6 /* OutfitGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitGenerator.swift; sourceTree = "<group>"; };
+		B1AA71771D89E5F900B69BAC /* BrandPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandPickerViewController.swift; sourceTree = "<group>"; };
+		B1AA71791D89E60A00B69BAC /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		B1D3015C1D29E11A006811F5 /* WhatToWearApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToWearApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D3015F1D29E11A006811F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1D301611D29E11A006811F5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +160,8 @@
 				B1D301611D29E11A006811F5 /* MainViewController.swift */,
 				B1218A741D398C09000AB7BA /* ItemsTableViewController.swift */,
 				B154AB811D4BAE1E00894ACE /* AddItemViewController.swift */,
-				B1F49AEF1D4C32290043704F /* Views */,
+				B1AA71771D89E5F900B69BAC /* BrandPickerViewController.swift */,
+				B1AA71791D89E60A00B69BAC /* ColorPickerViewController.swift */,
 				B1D3015F1D29E11A006811F5 /* AppDelegate.swift */,
 				B1D301631D29E11A006811F5 /* Main.storyboard */,
 				B1D301661D29E11A006811F5 /* Assets.xcassets */,
@@ -193,13 +198,6 @@
 				B16806FF1D4148C1005639F6 /* OutfitGenerator.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		B1F49AEF1D4C32290043704F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,9 +472,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1AA717A1D89E60A00B69BAC /* ColorPickerViewController.swift in Sources */,
 				B1D301621D29E11A006811F5 /* MainViewController.swift in Sources */,
 				B13D772F1D7F8D5600B0FC29 /* DataManager.swift in Sources */,
 				B1D3018E1D29E16E006811F5 /* Clothing.swift in Sources */,
+				B1AA71781D89E5F900B69BAC /* BrandPickerViewController.swift in Sources */,
 				B1D301901D29E1B8006811F5 /* Outfit.swift in Sources */,
 				B154AB821D4BAE1E00894ACE /* AddItemViewController.swift in Sources */,
 				B1218A751D398C09000AB7BA /* ItemsTableViewController.swift in Sources */,

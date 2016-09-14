@@ -8,42 +8,60 @@
 
 import UIKit
 
-class ItemsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ItemsTableViewController: UIViewController {
     
     let mainVC = MainViewController()
     let outfitGenerator = OutfitGenerator()
-//    let clothing = Clothing()
     
+    var segmentControl = UISegmentedControl()
     let table = UITableView()
     
     
-    override func viewWillLayoutSubviews() {
-        self.view.backgroundColor = UIColor.whiteColor()
-        self.view.addSubview(table)
-        self.table.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addConstraint(NSLayoutConstraint(item: table, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0))
-        self.view.addConstraint(NSLayoutConstraint(item: table, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 1.0, constant: 0.0))
-        self.view.addConstraint(NSLayoutConstraint(item: table, attribute: .Top, relatedBy: .Equal, toItem: self.topLayoutGuide, attribute: .Bottom, multiplier: 1.0, constant: 0.0))
-        self.view.addConstraint(NSLayoutConstraint(item: table, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 0.0))
-    }
-    
     override func viewDidLoad() {
+        view.addSubview(table)
+        table.frame = CGRectMake(0, 0, view.frame.width, view.frame.height)
         table.dataSource = self
         table.delegate = self
         table.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-//        let addItemButton = UIBarButtonItem(title: "+", style: UIBarButtonItemStyle.plain, target: self, action: #selector(openAddItem(sender:)))
+        let segments = ["All", "Tops", "Bottoms", "Dresses"]
+        segmentControl = UISegmentedControl(items: segments)
+        segmentControl.selectedSegmentIndex = 0
+        segmentControl.addTarget(self, action: #selector(ItemsTableViewController.changeSegment), forControlEvents: .ValueChanged)
+        
         let addItemButton = UIBarButtonItem(title: "+", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(openAddItem(_:)))
         self.navigationItem.rightBarButtonItem = addItemButton
     }
     
-    func openAddItem(sender: UIBarButtonItem) {
-        let addItemVC = AddItemViewController()
-        self.navigationController?.pushViewController(addItemVC, animated: true)
+    override func viewWillAppear(animated: Bool) {
+//        let width: CGFloat = 240
+//        if let navBar = self.navigationController?.navigationBar {
+//            segmentControl.frame = CGRectMake(navBar.frame.width/2-width/2, 5, width, navBar.frame.height-10)
+//            navBar.addSubview(segmentControl)
+//        }
     }
     
+    func openAddItem(sender: UIBarButtonItem) {
+        let addItemVC = AddItemViewController()
+        self.presentViewController(addItemVC, animated: true, completion: nil)
+    }
     
-    //************* UITableView Stuffs *************//
+    func changeSegment(sender: UISegmentedControl) {
+        print("segement value changed")
+//        let dm = DataManager()
+//        switch sender.selectedSegmentIndex {
+//        case 0: dm.getClothing()
+//        case 1: dm.getTops()
+//        case 2: dm.getBottoms()
+//        case 3: dm.getOnePieces()
+//        default: break
+//        }
+    }
+    
+}
+
+extension ItemsTableViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -68,6 +86,5 @@ class ItemsTableViewController: UIViewController, UITableViewDataSource, UITable
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         }
     }
-    
     
 }

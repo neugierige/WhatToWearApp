@@ -56,7 +56,6 @@ struct Clothing {
     
     enum Brand: String {
         case GAP = "GAP"
-        
     }
     
     enum Season {

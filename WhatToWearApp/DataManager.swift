@@ -26,6 +26,17 @@ class DataManager: NSObject {
         }
     }
     
+    func getTops() {
+        print("getting all the tops")
+    }
+    
+    func getBottoms() {
+        print("getting all the bottoms")
+    }
+    
+    func getOnePieces() {
+        print("getting all the onepieces")
+    }
     
     func postClothing(clothing: Clothing) {
         var postParams = [String: [String: AnyObject]]()
