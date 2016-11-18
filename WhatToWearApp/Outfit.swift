@@ -11,9 +11,9 @@ import Foundation
 struct Outfit {
     
     enum OutfitCategory {
-        case TopBottom
-        case LayeredTop
-        case OnePiece
+        case topBottom
+        case layeredTop
+        case onePiece
     }
     
     var good = Bool()

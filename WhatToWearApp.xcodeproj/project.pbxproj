@@ -278,12 +278,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = LAF286FY7D;
 						DevelopmentTeamName = "Luyuan Xing (Personal Team)";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					B1D3016F1D29E11A006811F5 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = LAF286FY7D;
 						DevelopmentTeamName = "Luyuan Xing (Personal Team)";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B1D3015B1D29E11A006811F5;
 					};
@@ -291,6 +293,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = LAF286FY7D;
 						DevelopmentTeamName = "Luyuan Xing (Personal Team)";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B1D3015B1D29E11A006811F5;
 					};
@@ -633,6 +636,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LAF286FY7D;
 				INFOPLIST_FILE = WhatToWearApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -648,6 +653,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LAF286FY7D;
 				INFOPLIST_FILE = WhatToWearApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -33,58 +33,58 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let viewsArray = [display, refreshButton, voteDown, voteUp, gearIcon]
+        let viewsArray = [display, refreshButton, voteDown, voteUp, gearIcon] as [Any]
         for item in viewsArray {
-            view.addSubview(item)
+            view.addSubview(item as! UIView)
         }
         
         display.translatesAutoresizingMaskIntoConstraints = false
-        view.addConstraint(NSLayoutConstraint(item: display, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: display, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: -60))
-        view.addConstraint(NSLayoutConstraint(item: display, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 0.75, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: display, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Height, multiplier: 0.33, constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: display, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: display, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: -60))
+        view.addConstraint(NSLayoutConstraint(item: display, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 0.75, constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: display, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 0.33, constant: 0))
         display.layer.borderWidth = 1
-        display.layer.borderColor = UIColor.blackColor().CGColor
-        display.textAlignment = .Center
+        display.layer.borderColor = UIColor.black.cgColor
+        display.textAlignment = .center
         display.numberOfLines = 0
         
         let buffer: CGFloat = 30
         let fullWidth: CGFloat = view.frame.width - buffer*4
         let height: CGFloat = 60
 
-        refreshButton.frame = CGRectMake(view.frame.midX - fullWidth/4, view.frame.maxY-(height+buffer), fullWidth/2, height)
+        refreshButton.frame = CGRect(x: view.frame.midX - fullWidth/4, y: view.frame.maxY-(height+buffer), width: fullWidth/2, height: height)
         refreshButton.layer.cornerRadius = 10
         refreshButton.layer.borderWidth = 2
-        refreshButton.layer.borderColor = UIColor.blackColor().CGColor
-        refreshButton.backgroundColor = UIColor.clearColor()
-        refreshButton.userInteractionEnabled = true
-        refreshButton.setTitle("refresh!", forState: [])
-        refreshButton.setTitleColor(UIColor.blackColor(), forState: [])
-        refreshButton.addTarget(self, action: #selector(MainViewController.getOutfit), forControlEvents: .TouchUpInside)
+        refreshButton.layer.borderColor = UIColor.black.cgColor
+        refreshButton.backgroundColor = UIColor.clear
+        refreshButton.isUserInteractionEnabled = true
+        refreshButton.setTitle("refresh!", for: [])
+        refreshButton.setTitleColor(UIColor.black, for: [])
+        refreshButton.addTarget(self, action: #selector(MainViewController.getOutfit), for: .touchUpInside)
         
         let buttonWidth = height-10
-        voteUp.frame = CGRectMake(buffer, refreshButton.frame.minY, buttonWidth, buttonWidth)
-        voteUp.userInteractionEnabled = true
-        voteUp.setImage(UIImage(named: "thumbsup"), forState: [])
-        voteUp.addTarget(self, action: #selector(MainViewController.thumbsUp), forControlEvents: .TouchUpInside)
+        voteUp.frame = CGRect(x: buffer, y: refreshButton.frame.minY, width: buttonWidth, height: buttonWidth)
+        voteUp.isUserInteractionEnabled = true
+        voteUp.setImage(UIImage(named: "thumbsup"), for: [])
+        voteUp.addTarget(self, action: #selector(MainViewController.thumbsUp), for: .touchUpInside)
         
-        voteDown.frame = CGRectMake(view.frame.maxX - buttonWidth - buffer, refreshButton.frame.minY, buttonWidth, buttonWidth)
-        voteDown.userInteractionEnabled = true
-        voteDown.setImage(UIImage(named: "thumbsdown"), forState: [])
-        voteDown.addTarget(self, action: #selector(MainViewController.thumbsDown), forControlEvents: .TouchUpInside)
+        voteDown.frame = CGRect(x: view.frame.maxX - buttonWidth - buffer, y: refreshButton.frame.minY, width: buttonWidth, height: buttonWidth)
+        voteDown.isUserInteractionEnabled = true
+        voteDown.setImage(UIImage(named: "thumbsdown"), for: [])
+        voteDown.addTarget(self, action: #selector(MainViewController.thumbsDown), for: .touchUpInside)
         
         gearIcon.translatesAutoresizingMaskIntoConstraints = false
-        view.addConstraint(NSLayoutConstraint(item: gearIcon, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 20))
-        view.addConstraint(NSLayoutConstraint(item: gearIcon, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -10))
-        gearIcon.setImage(UIImage(named: "gear"), forState: [])
-        gearIcon.setTitleColor(UIColor.blackColor(), forState: [])
-        gearIcon.addTarget(self, action: #selector(openItemsTable), forControlEvents: .TouchUpInside)
+        view.addConstraint(NSLayoutConstraint(item: gearIcon, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 20))
+        view.addConstraint(NSLayoutConstraint(item: gearIcon, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: -10))
+        gearIcon.setImage(UIImage(named: "gear"), for: [])
+        gearIcon.setTitleColor(UIColor.black, for: [])
+        gearIcon.addTarget(self, action: #selector(openItemsTable), for: .touchUpInside)
         
         getOutfit()
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -136,7 +136,7 @@ class MainViewController: UIViewController {
 //        }
 //    }
     
-    func randomNum(someArray: Array<[String:String]>) -> Int {
+    func randomNum(_ someArray: Array<[String:String]>) -> Int {
         let arraySize: Int = someArray.count
         let randomNum = Int(arc4random_uniform(UInt32(arraySize)))
         return randomNum
@@ -153,12 +153,12 @@ class MainViewController: UIViewController {
         print("goodMatches are \(goodMatches)")
     }
     
-    func addBadMatch(badMatch: Array<[String:String]>) {
+    func addBadMatch(_ badMatch: Array<[String:String]>) {
         badMatches.append(badMatch.last!)
         print("the bad match is \(badMatch)")
     }
     
-    func addGoodMatch(goodMatch: Array<[String:String]>) {
+    func addGoodMatch(_ goodMatch: Array<[String:String]>) {
         goodMatches.append(goodMatch.last!)
         print("the good match is \(goodMatch)")
     }
@@ -168,7 +168,7 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(itemsTableVC, animated: true)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     

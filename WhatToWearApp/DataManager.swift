@@ -38,14 +38,14 @@ class DataManager: NSObject {
         print("getting all the onepieces")
     }
     
-    func postClothing(clothing: Clothing) {
+    func postClothing(_ clothing: Clothing) {
         var postParams = [String: [String: AnyObject]]()
-        if let brand = clothing.brand, color = clothing.color, seasons = clothing.seasons, workApp = clothing.workAppropriate, layerable = clothing.layerable {
-            postParams = ["clothing": ["brand": brand, "color": color, "seasons": seasons, "workAppropriate": workApp, "layerable": layerable]]
-            Alamofire.request(.POST, apiURL, parameters: postParams, encoding: .JSON)
+        if let brand = clothing.brand, let color = clothing.color, let seasons = clothing.seasons, let workApp = clothing.workAppropriate, let layerable = clothing.layerable {
+            postParams = ["clothing": ["brand": brand as AnyObject, "color": color as AnyObject, "seasons": seasons as AnyObject, "workAppropriate": workApp as AnyObject, "layerable": layerable as AnyObject]]
+            Alamofire.request(.POST, apiURL, parameters: postParams, encoding: .json)
                 .responseString { response in
                     print("here is the request body")
-                    print(NSString(data: (response.request?.HTTPBody!)!, encoding: NSUTF8StringEncoding)!)
+                    print(NSString(data: (response.request?.httpBody!)!, encoding: String.Encoding.utf8)!)
                     print(response.response)
                     print(response.data)
                     print(response.result)

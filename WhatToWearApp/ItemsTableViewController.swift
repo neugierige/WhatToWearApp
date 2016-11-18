@@ -19,21 +19,21 @@ class ItemsTableViewController: UIViewController {
     
     override func viewDidLoad() {
         view.addSubview(table)
-        table.frame = CGRectMake(0, 0, view.frame.width, view.frame.height)
+        table.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         table.dataSource = self
         table.delegate = self
-        table.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         let segments = ["All", "Tops", "Bottoms", "Dresses"]
         segmentControl = UISegmentedControl(items: segments)
         segmentControl.selectedSegmentIndex = 0
-        segmentControl.addTarget(self, action: #selector(ItemsTableViewController.changeSegment), forControlEvents: .ValueChanged)
+        segmentControl.addTarget(self, action: #selector(ItemsTableViewController.changeSegment), for: .valueChanged)
         
-        let addItemButton = UIBarButtonItem(title: "+", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(openAddItem(_:)))
+        let addItemButton = UIBarButtonItem(title: "+", style: UIBarButtonItemStyle.plain, target: self, action: #selector(openAddItem(_:)))
         self.navigationItem.rightBarButtonItem = addItemButton
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
 //        let width: CGFloat = 240
 //        if let navBar = self.navigationController?.navigationBar {
 //            segmentControl.frame = CGRectMake(navBar.frame.width/2-width/2, 5, width, navBar.frame.height-10)
@@ -41,12 +41,12 @@ class ItemsTableViewController: UIViewController {
 //        }
     }
     
-    func openAddItem(sender: UIBarButtonItem) {
+    func openAddItem(_ sender: UIBarButtonItem) {
         let addItemVC = AddItemViewController()
-        self.presentViewController(addItemVC, animated: true, completion: nil)
+        self.present(addItemVC, animated: true, completion: nil)
     }
     
-    func changeSegment(sender: UISegmentedControl) {
+    func changeSegment(_ sender: UISegmentedControl) {
         print("segement value changed")
 //        let dm = DataManager()
 //        switch sender.selectedSegmentIndex {
@@ -66,24 +66,24 @@ extension ItemsTableViewController: UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return outfitGenerator.items.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        var item = outfitGenerator.items[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        var item = outfitGenerator.items[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = "\(item["type"]!): \(item["color"]!) \(item["style"]!) from \(item["brand"]!)"
         return cell
     }
 
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
         }
     }
     

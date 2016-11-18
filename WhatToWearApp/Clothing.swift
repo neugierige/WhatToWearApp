@@ -24,33 +24,40 @@ struct Clothing {
     }
     
     enum ClothingCategory {
-        case Top
-        case Bottom
-        case OnePiece
+        case top
+        case bottom
+        case onePiece
         
         var types: [Clothing.ClothingType] {
             switch self {
-            case .Top:
+            case .top:
                 return [.TShirt, .LongsleeveShirt, .Tank, .Buttondown, .Sweatshirt, .Hoodie]
-            case .Bottom:
+            case .bottom:
                 return [.Jeans, .Shorts]
-            case .OnePiece:
+            case .onePiece:
                 return [.ShirtDress]
                 
             }
+            
+            let type = ClothingType(rawValue: "TShirt")
+            
         }
     }
     
     enum ClothingType: String {
-        case TShirt = "TShirt"
-        case LongsleeveShirt = "LongsleeveShirt"
-        case Tank = "Tank"
-        case Buttondown = "Buttondown"
-        case Sweatshirt = "Sweatshirt"
-        case Hoodie = "Hoodie"
-        case Jeans = "Jeans"
-        case Shorts = "Shorts"
-        case ShirtDress = "ShirtDress"
+        case TShirt
+        case LongsleeveShirt
+        case Tank
+        case Buttondown
+        case Sweatshirt
+        case Hoodie
+        case Jeans
+        case Shorts
+        case ShirtDress
+        
+        var category: [] {
+            
+        }
     }
     
     
@@ -59,10 +66,10 @@ struct Clothing {
     }
     
     enum Season {
-        case Spring
-        case Summer
-        case Fall
-        case Winter
+        case spring
+        case summer
+        case fall
+        case winter
     }
     
     
